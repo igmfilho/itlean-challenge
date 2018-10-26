@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.github.igmfilho.challenge.itlean.api.model.UserDTO;
 
 @RestController
-@RequestMapping(value="/api/users")
+@RequestMapping(value="/users")
 @CrossOrigin(origins="*")
 public class UserResource {
 

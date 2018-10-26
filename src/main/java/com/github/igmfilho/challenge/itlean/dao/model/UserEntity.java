@@ -107,4 +107,17 @@ public class UserEntity implements Serializable {
 	public void setPhones(List<PhoneEntity> phones) {
 		this.phones = phones;
 	}
+	
+	public String toString(){
+	    StringBuilder builder = new StringBuilder();
+	    builder.append(this.getId()).append(", ")
+	      .append(this.getName()).append(", ")
+	      .append(this.getPassword()).append(", ")
+	      .append(this.getToken()).append(", ")
+	      .append(this.getCreated()).append(", ")
+	      .append(this.getModified()).append(", ")
+	      .append(this.getLastSignin());
+
+	    return builder.toString();
+	}
 }

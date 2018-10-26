@@ -43,4 +43,13 @@ public class PhoneEntity implements Serializable {
 	public void setNumber(Integer number) {
 		this.number = number;
 	}
+	
+	public String toString(){
+	    StringBuilder builder = new StringBuilder();
+	    builder.append(this.getId()).append(", ")
+	      .append(this.getDdd()).append(", ")
+	      .append(this.getNumber());
+
+	    return builder.toString();
+	}
 }
