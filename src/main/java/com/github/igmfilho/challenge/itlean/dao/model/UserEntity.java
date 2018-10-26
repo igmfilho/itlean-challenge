@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Calendar;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -33,7 +34,7 @@ public class UserEntity implements Serializable {
 	
 	private String token;
 
-	@OneToMany
+	@OneToMany(cascade = CascadeType.PERSIST)
 	private List<PhoneEntity> phones;
 
 	public Long getId() {

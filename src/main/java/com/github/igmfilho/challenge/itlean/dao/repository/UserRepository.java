@@ -1,7 +1,6 @@
 package com.github.igmfilho.challenge.itlean.dao.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 
 import com.github.igmfilho.challenge.itlean.dao.model.UserEntity;
 
@@ -19,7 +18,5 @@ public interface UserRepository extends JpaRepository<UserEntity, Long> {
      * @return  The user whose email is an exact match with the given email.
      *          If no user is found, this method returns null.
      */
-    @Query("SELECT u FROM UserEntity u WHERE LOWER(u.email) = LOWER(:email)")	
-	UserEntity findByEmail(String email);
-
+	public UserEntity findByEmail(String email);
 }
