@@ -36,7 +36,7 @@ public class UserResourceTest {
 
 	@Test
 	public void test() throws Exception {
-		mockMvc.perform(post("/users/sign-up").contentType(MediaType.APPLICATION_JSON).content("{\"name\": \"grep\", \"password\": \"123456\" }") )
+		mockMvc.perform(post("/users/sign-up").contentType(MediaType.APPLICATION_JSON).content("{\"name\": \"grep\", \"email\": \"grep@test.com\", \"password\": \"123456\" }") )
         				.andExpect(status().isOk());
 	}
 }
